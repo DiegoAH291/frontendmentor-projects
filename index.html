@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./src/assets/images/icons8-calculator.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./src/assets/styles/main.scss">
+  <link rel="stylesheet" href="./src/assets/styles/app.scss">
+  <title>Age Calculator App</title>
+</head>
+
+<body>
+
+  <main class="age-container" >
+
+    <!--Form responsible for calculating age-->
+    <form id="form" class="age-form">
+
+      <div class="form-contain-box">
+        <div class="age-form-day">
+          <label for="day-input" class="age-form-day__label" id="label-day">Day</label>
+          <input type="number" id="day-input" class="age-form-day__input" placeholder="DD">
+          <span class="age-form__error" id="error"></span>
+        </div>
+
+        <div class="age-form-month">
+          <label for="month-input" class="age-form-month__label" id="label-month">Month</label>
+          <input type="number" id="month-input" class="age-form-month__input" placeholder="MM">
+          <span class="age-form__error" id="error"></span>
+        </div>
+
+        <div class="age-form-year">
+          <label for="year-input" class="age-form-year__label" id="label-year">Year</label>
+          <input type="number" id="year-input" class="age-form-year__input" placeholder="YYYY">
+          <span class="age-form__error" id="error"></span>
+        </div>
+      </div>
+
+      <div class="line-container">
+        <button class="line-container__btn">
+          <img src="./src/assets/images/icon-arrow.svg" alt="icon" class="line-container__btn__icon">
+        </button>
+      </div>
+
+    </form>
+
+    <!--Section of values obtained from the calculation-->
+    <section class="value-container">
+
+      <div class="value-box">
+        <h1 class="value-box__value" id="value-year">--</h1>
+        <h1 class="value-box__title">Years</h1>
+      </div>
+
+      <div class="value-box">
+        <h1 class="value-box__value" id="value-month">--</h1>
+        <h1 class="value-box__title">Months</h1>
+      </div>
+
+      <div class="value-box">
+        <h1 class="value-box__value" id="value-day">--</h1>
+        <h1 class="value-box__title">Days</h1>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+@import "./assets.scss";
+@import "./mixin";
+
+.age-container {
+    transition: .3s ease;
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: $White;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 120px;
+
+    .age-form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .form-contain-box {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            .age-form-day {
+                @include formbox;
+
+                .age-form-day__label {
+                    @include formlabel;
+                }
+
+                .age-form-day__input {
+                    @include forminput;
+                }
+            }
+
+            .age-form-month {
+                @include formbox;
+
+                .age-form-month__label {
+                    @include formlabel;
+                }
+
+                .age-form-month__input {
+                    @include forminput;
+                }
+            }
+
+            .age-form-year {
+                @include formbox;
+
+                .age-form-year__label {
+                    @include formlabel;
+                }
+
+                .age-form-year__input {
+                    @include forminput;
+                }
+            }
+        }
+        
+        .line-container{
+            transition: .3s ease;
+            margin: 30px 0 30px;
+            border-bottom: 1px solid $OfWhite;
+            position: relative;
+            width: 100%;
+
+            .line-container__btn{
+                  position: absolute;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: $Purple;
+                  width: 80px;
+                  height: 80px;
+                  border-radius: 50%;
+                  border: none;
+                  top: -40px;
+                  right: 0;
+                  cursor: pointer;
+
+                  &:hover{
+                      transition: .3s ease;
+                      background-color: $OffBlack;
+                  }
+            }
+        }
+    }
+
+    .value-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .value-box{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .value-box__value{
+                 font-size: 4em;
+                 font-weight: 800;
+                 color: $Purple;
+            }
+
+            .value-box__title{
+                font-size: 4em;
+                 font-weight: 800;
+                 color: $OffBlack;
+            }
+        }
+    }
+}
+
+.age-form__error {
+    color: $LightRed;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 0.90em;
+}
+
+@media screen and (max-width:1024px) {
+      .age-container{
+          width: 700px;
+
+          .form-contain-box{
+            justify-content: center;
+          }
+      }
+}
+
+@media screen and (max-width:768px) {
+    .age-container{
+        width: 375px;
+        align-items: center;
+        justify-content: center;
+
+        .line-container{
+            margin: 30px 0 50px;
+
+            .line-container__btn{
+                width: 40px;
+                height: 40px;
+                left: calc(45% - 15px);
+                top: -15px;
+
+                .line-container__btn__icon{
+                    width: 30px;
+                }
+            }
+        }
+
+        .value-container{
+
+            .value-box__value{
+                font-size: 2em;
+            }
+        }
+    }
+}
